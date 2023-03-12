@@ -1,5 +1,5 @@
 def multiple_returns(sentence):
-    if len(sentence) == 0:
+    if sentence == "":
         return None
     length = len(sentence)
     first = tup[0]
