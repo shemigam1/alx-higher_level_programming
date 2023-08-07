@@ -2,4 +2,4 @@
 str = "Holberton School"
 three = str * 3
 print(three)
-print("{}".format(str[:9]))
+print(str[:9])
