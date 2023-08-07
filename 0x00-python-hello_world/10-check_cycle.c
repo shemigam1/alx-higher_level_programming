@@ -11,12 +11,21 @@ int check_cycle(listint_t *list)
 	listint_t *fast;
 	listint_t *head = list;
 
-	if (list == NULL)
-		return (1);
-	fast = head->next;
-	while (fast != NULL && fast != head)
+	if (head-> != NULL)
 	{
-		fast = fast->next;
+		head = head->next;
 	}
-	return (fast == head)
+	else
+	{
+		return (0);
+	}
+	while (head != list)
+	{
+		if (head->next == NULL)
+		{
+			return (0);
+		}
+		head = head->next;
+	}
+	return (1);
 }
