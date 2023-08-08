@@ -4,6 +4,8 @@ number = random.randint(-10000, 10000)
 str_num = repr(number)
 last = str_num[-1]
 last = int(last)
+if number < 0:
+    last = last * -1
 end = ""
 if last > 5:
     end = "and is greater than 5"
