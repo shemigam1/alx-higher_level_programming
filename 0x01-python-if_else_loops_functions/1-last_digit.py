@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-str_num = repr(number)
-last = str_num[-1]
-last = int(last)
+last = number % 10
 if number < 0:
+    number = number * -1
     last = last * -1
 end = ""
 if last > 5:
