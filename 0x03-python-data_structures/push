@@ -1,2 +1,3 @@
 #!/bin/bash
+./permission
 git add .; git commit -m "$COMMIT"; git push
