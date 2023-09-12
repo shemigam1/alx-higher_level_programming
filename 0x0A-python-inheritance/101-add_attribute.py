@@ -3,7 +3,7 @@
 """module contains  function"""
 
 
-def add_new_attribute(obj, attr_name, attr_value):
+def add_attribute(obj, attr_name, attr_value):
     """
     Adds a new attribute to an object if it's possible; raises a TypeError
     exception if the object cannot have new attributes.
