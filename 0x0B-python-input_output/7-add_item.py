@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""file description"""
 import sys
 import os
 import json
@@ -7,6 +7,7 @@ import json
 # Import the custom functions
 from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
+
 
 def main():
     # Check if the add_item.json file exists, and load its content if it does
@@ -20,6 +21,7 @@ def main():
 
     # Save the updated list as a JSON representation in add_item.json
     save_to_json_file(my_list, 'add_item.json')
+
 
 if __name__ == "__main__":
     main()
