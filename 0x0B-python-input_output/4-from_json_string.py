@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import json
 
-"""module contains function def from_json_string(my_str):"""
+"""module contains function"""
 
 
 def from_json_string(my_str):
