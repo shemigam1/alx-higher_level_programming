@@ -1,23 +1,7 @@
 #!/usr/bin/python3
 
 """this module contains class baseGeometry"""
-
-
-class BaseGeometry:
-    """class basegeometry"""
-    def area(self):
-        """area method"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """int valudation for value"""
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
-
-
-"""this module contains class Rectangle"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
