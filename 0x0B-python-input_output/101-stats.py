@@ -23,37 +23,32 @@ def print_stats(size, status_codes):
 if __name__ == "__main__":
     import sys
 
-    size = 0
-    status_codes = {}
-    valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
-    count = 0
+    total_file_size = 0
+    status_code_counts = {}
+    line_count = 0
 
     try:
         for line in sys.stdin:
-            if count == 10:
-                print_stats(size, status_codes)
-                count = 1
-            else:
-                count += 1
+            line_count += 1
 
-            line = line.split()
+        # Parse the input line
+            parts = line.strip().split()
+            if len(parts) >= 6:
+                status_code = parts[-2]
+                file_size = int(parts[-1])
 
-            try:
-                size += int(line[-1])
-            except (IndexError, ValueError):
-                pass
+            # Update total file size
+                total_file_size += file_size
 
-            try:
-                if line[-2] in valid_codes:
-                    if status_codes.get(line[-2], -1) == -1:
-                        status_codes[line[-2]] = 1
-                    else:
-                        status_codes[line[-2]] += 1
-            except IndexError:
-                pass
+            # Update status code counts
+                if status_code in status_code_counts:
+                    status_code_counts[status_code] += 1
+                else:
+                    status_code_counts[status_code] = 1
 
-        print_stats(size, status_codes)
+        # Print metrics every 10 lines
+            if line_count % 10 == 0:
+                print_metrics()
 
     except KeyboardInterrupt:
-        print_stats(size, status_codes)
-        raise
+        pass
