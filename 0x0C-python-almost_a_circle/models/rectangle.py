@@ -91,10 +91,12 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update method"""
         if args is not None and len(args) != 0:
             if len(args) >= 1:
+                if type(args[0]) != int and args[0] is not None:
+                    raise TypeError("id must be an integer")
                 self.id = args[0]
             if len(args) > 1:
                 self.__width = args[1]
@@ -104,3 +106,17 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) > 4:
                 self.__y = args[4]
+        else:
+            for key, val in kwargs.items():
+                if key == 'id':
+                    if type(val) != int and val is not None:
+                        raise TypeError("id must be an integer")
+                    self.id = val
+                if key == 'width':
+                    self.__width = val
+                if key == 'height':
+                    self.__height = val
+                if key == 'x':
+                    self.__x = val
+                if key == 'y':
+                    self.__y = val
