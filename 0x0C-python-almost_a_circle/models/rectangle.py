@@ -77,7 +77,15 @@ class Rectangle(Base):
 
     def display(self):
         """print to stdout Rectangle instance representation"""
+        for y in range(0, self.__y):
+            print()
         for i in range(0, self.__height):
+            for x in range(0, self.__x):
+                print(" ", end="")
             for j in range(0, self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
