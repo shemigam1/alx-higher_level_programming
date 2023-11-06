@@ -6,7 +6,7 @@ module contains class Square
 """
 
 
-from module.rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
