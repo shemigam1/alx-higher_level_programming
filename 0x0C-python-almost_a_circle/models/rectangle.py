@@ -101,3 +101,12 @@ class Rectangle(Base):
         area method
         """
         return self.__width * self.__height
+
+    def display(self):
+        """
+        display method
+        """
+        for i in range(self.__height):
+            for j in range(self.__weight):
+                print("#", end="")
+            print()
