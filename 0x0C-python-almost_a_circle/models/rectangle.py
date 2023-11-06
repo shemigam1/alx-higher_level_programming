@@ -104,7 +104,7 @@ class Rectangle(Base):
 
     def display(self):
         """
-        display method
+        display method with #
         """
         for i in range(self.__height):
             for j in range(self.__weight):
