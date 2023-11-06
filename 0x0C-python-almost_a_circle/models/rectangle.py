@@ -109,12 +109,13 @@ class Rectangle(Base):
         for a in range(0, self.__y):
             print()
         for i in range(0, self.__height):
-            for b in (range(0, self.__x):
-                print("", end="")
+            for b in range(0, self.__x):
+                print(" ", end="")
             for j in range(0, self.__width):
                 print("#", end="")
             print()
 
     def __str__(self):
+        """str method"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.__x, self.__y, self.__width, self.__height)
