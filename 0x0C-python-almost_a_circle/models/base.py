@@ -35,7 +35,7 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
-    def save_to_files(cls, list_objs):
+    def save_to_file(cls, list_objs):
         """save to files method"""
         if list_objs is None:
             list_objs = []
