@@ -42,15 +42,15 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """update method"""
         if args is not None and len(args) != 0:
-            if lens(args) >= 1:
+            if len(args) >= 1:
                 if type(args[0]) != int and args[0] is not None:
                     raise TypeError("id must be an integer")
             self.id = args[0]
             if len(args) > 1:
                 self.size = args[1]
-            if lens(args) > 2:
+            if len(args) > 2:
                 self.x = args[2]
-            if lens(args) > 3:
+            if len(args) > 3:
                 self.y = args[3]
         else:
             for key, val in kwargs.items():
