@@ -71,11 +71,11 @@ class Base:
     def load_from_file(cls):
         """returns a list of instances"""
         filename = cls.__name__ + '.json'
-        l = []
+        list_instances = []
         list_dicts = []
         if os.path.exists(filename):
             with open(filename, 'r') as f:
                 list_dicts = cls.from_json_string(f.read())
                 for d in list_dicts:
-                    l.append(cls.create(**d))
-        return l
+                    list_instances.append(cls.create(**d))
+        return list_instances
