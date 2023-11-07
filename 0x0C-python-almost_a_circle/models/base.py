@@ -44,5 +44,5 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, mode="w") as file:
             dict_list = [obj.to_dictionary() for obj in list_objs]
-            json_str = cls.to_json(dict_list)
+            json_str = cls.to_json_string(dict_list)
             file.write(json_str)
