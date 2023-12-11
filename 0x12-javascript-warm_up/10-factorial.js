@@ -1,11 +1,5 @@
 #!/usr/bin/node
 function fact(a) {
-  if (a === undefined) {
-    return (1);
-  }
-  if (a === 0 || a === 1) {
-    return (1);
-  }
-  return a * fact((a) - 1);
+  return n === 0 || isNaN(n) ? 1 : n * factorial(n - 1);
 }
-console.log(fact(parseInt(process.argv[2])));
+console.log(fact(Number(process.argv[2])));
