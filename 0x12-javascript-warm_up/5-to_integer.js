@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 let number = Number(process.argv[3]);
 if (number == 'NaN') {
 	console.log("Not a number");

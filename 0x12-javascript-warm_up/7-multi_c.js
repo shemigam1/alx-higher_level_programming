@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 let power = Number(process.argv[2]);
 if (power) {
 	for (let i = 0; i < power; i++) {

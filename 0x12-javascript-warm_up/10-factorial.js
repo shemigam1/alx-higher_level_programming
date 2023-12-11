@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 function fact(a) {
 	if (a === undefined) {
 		return (1);
