@@ -13,7 +13,8 @@ if __name__ == '__main__':
     """
     code should not be executed when imported
     """
-    db_url = 'mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1], argv[2], argv[3])
+    db_url = 'mysql+mysqldb://{}:{}@localhost/{}'.format(
+            argv[1], argv[2], argv[3])
     engine = create_engine(db_url, pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)

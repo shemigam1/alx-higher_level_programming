@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
- prints the first State object from the
+ prints the State object with that matches arg from the
  database hbtn_0e_6_usa
 """
 from model_state import Base, State
@@ -20,11 +20,11 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    first_state = session.query(State).order_by(State.id).first()
+    state = session.query(State).filter(State.name == argv[4]).first()
 
-    if first_state:
-        print("{}: {}".format(first_state.id, first_state.name))
+    if state:
+        print(state.id)
     else:
-        print("Nothing")
+        print("Not found")
 
     session.close()
