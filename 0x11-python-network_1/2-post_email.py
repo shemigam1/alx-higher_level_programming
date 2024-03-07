@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-sends post request with the email as a parameter, and displays the body of the response (decoded in utf-8)
+sends post request with the email as a parameter,
+and displays the body of the response (decoded in utf-8)
 """
 import urllib.request
 import urllib.parse
