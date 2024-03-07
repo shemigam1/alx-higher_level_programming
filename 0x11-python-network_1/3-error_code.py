@@ -12,6 +12,7 @@ if __name__ == '__main__':
     req = urllib.request.Request(url)
     try:
         with urllib.request.urlopen(req) as response:
-            data = response.read()
+            data = response.read().decode('ut8')
+            print(data)
     except urllib.error.HTTPError as e:
-        print(e.code)
+        print("Error code: {}".format(e.code))
