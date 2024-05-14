@@ -64,6 +64,11 @@ Check infinitely large float:
 	>>> add_integer(float("INF"), 3.4444)
 	89
 
+Check infinitely negative large float:
+
+	>>> add_integer(-float("inf"))
+	89
+
 Check Nan:
 
 	>>> add_integer(float('NaN'))

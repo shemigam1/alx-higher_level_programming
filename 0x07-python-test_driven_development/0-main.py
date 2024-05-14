@@ -5,7 +5,7 @@ print(add_integer(1, 2))
 print(add_integer(100, -2))
 print(add_integer(100.3, -2))
 print(add_integer(2.2, 3.3))
-print(add_integer(2))
+print(add_integer(-float("inf")))
 try:
     print(add_integer(4, "School"))
 except Exception as e:
