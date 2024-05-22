@@ -1,6 +1,9 @@
--- show shows in tv dump
-SELECT tv_shows.title, tv_show_genres.genre_id
-FROM tv_shows
-LEFT JOIN tv_show_genres ON tv_shows.id=tv_show_genres.show_id
-WHERE tv_show_genres.show_id is NULL
-ORDER BY tv_shows.title, tv_show_genres.genre_id;
+-- count shows by genre
+
+SELECT g.`name` AS `genre`,
+       COUNT(*) AS `number_of_shows`
+  FROM `tv_genres` AS g
+       INNER JOIN `tv_show_genres` AS t
+       ON g.`id` = t.`genre_id`
+ GROUP BY g.`name`
+ ORDER BY `number_of_shows` DESC;
