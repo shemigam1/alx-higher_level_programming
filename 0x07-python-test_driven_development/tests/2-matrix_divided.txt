@@ -1,0 +1,27 @@
+The ``2-matrix_divided test`` module
+=================================
+
+Using ``matrix_divided``
+-----------------------
+
+first import ``matrix_divided`` from ``2-matrix_divided``
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Check for module docstring:
+
+	>>> doc_m = __import__('2-matrix_divided').__doc__
+	>>> len(doc_m) > 1
+	True
+
+Check for function docstring:
+
+        >>> doc_f = __import__('2-matrix_divided').matrix_divided.__doc__
+	>>> len(doc_f) > 1
+        True
+
+Basic usage:
+
+	>>> matrix = [[2, 4, 6], [8, 10, 12]]
+	>>> matrix_divided(matrix, 2)
+	[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
