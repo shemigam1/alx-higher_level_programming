@@ -13,7 +13,7 @@ if __name__ == '__main__':
     except IndexError:
         q = ''
     payload = {'q': q}
-    r = requests.post(url, params=payload)
+    r = requests.post(url, data=payload)
     try:
         res = r.json()
         if res == {}:
